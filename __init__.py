@@ -73,8 +73,8 @@ class ResetStartupFile(bpy.types.Operator):
         scene = context.scene
 
         addon_path = bpy.utils.user_resource('SCRIPTS', "addons")
-        template_path = "visualizer-master\\template.blend"
-        temp_path = "visualizer-master\\temp.blend"
+        template_path = "visualizer-master/template.blend"
+        temp_path = "visualizer-master/temp.blend"
 
         full_path = os.path.join(addon_path, template_path)
         full_path_temp = os.path.join(addon_path, temp_path)
