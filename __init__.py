@@ -411,44 +411,20 @@ class panel(bpy.types.Panel):
         row = layout.row()
         
         row.label(text="pandartb3d")
+
+
+classes = [panel, ResetStartupFile, Instruction, ImportObj, SaveFile, Resolution, Qualitat, Preview, Smooth, SelectAll, Cam, Folder, ChangeHDRI, ReplaceMaterial, Materials, RotHDRI]
          
 def register() :
-    bpy.utils.register_class(panel) 
-    bpy.utils.register_class(ResetStartupFile)
-    bpy.utils.register_class(Instruction)
-    bpy.utils.register_class(ImportObj)
-    bpy.utils.register_class(SaveFile)
-    bpy.utils.register_class(Resolution)
-    bpy.utils.register_class(Qualitat)
-    bpy.utils.register_class(Preview)
-    bpy.utils.register_class(Smooth)
-    bpy.utils.register_class(SelectAll)
-    bpy.utils.register_class(Cam)
-    bpy.utils.register_class(Folder)
-    bpy.utils.register_class(ChangeHDRI)
-    bpy.utils.register_class(ReplaceMaterial)
-    bpy.utils.register_class(Materials)
-    bpy.utils.register_class(RotHDRI)
+
+    for cls in classes:
+        bpy.utils.register_class(cls) 
+
 
 
 
 def unregister() :
-    bpy.utils.unregister_class(panel)  
-    bpy.utils.unregister_class(ResetStartupFile)
-    bpy.utils.unregister_class(Instruction)
-    bpy.utils.unregister_class(ImportObj)
-    bpy.utils.unregister_class(SaveFile)
-    bpy.utils.unregister_class(Resolution)
-    bpy.utils.unregister_class(Qualitat)
-    bpy.utils.unregister_class(Preview)
-    bpy.utils.unregister_class(Smooth)
-    bpy.utils.unregister_class(SelectAll)
-    bpy.utils.unregister_class(Cam)
-    bpy.utils.unregister_class(Folder)
-    bpy.utils.unregister_class(ChangeHDRI)
-    bpy.utils.unregister_class(ReplaceMaterial)
-    bpy.utils.unregister_class(Materials)
-    bpy.utils.unregister_class(RotHDRI)
+    bpy.utils.unregister_class(cls) 
 
   
  
